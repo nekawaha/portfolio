@@ -42,6 +42,9 @@
             $(".menu>li:nth-child(4)").click(function(){
                 $('html, body').animate({scrollTop: $(".about").offset().top }, 'slow');
             })
+            $(".menu>li:nth-child(5)").click(function(){
+                $('html, body').animate({"scrollTop": "4100px" }, 'slow');
+            })
             menu_num = 0
             $(window).scroll(function(){
 
@@ -56,8 +59,11 @@
                 else if(sc>=2250 && sc<2900){
                     menu_num = 2
                 }
-                else if(sc>=2900){
+                else if(sc>=2900 && sc<4099){
                     menu_num = 3
+                }
+                else if(sc>=4099){
+                    menu_num = 4
                 }
                 $(".menu>li").eq(menu_num).css({"font-size":"22px","opacity":"1"})
                 $(".menu>li>span").eq(menu_num).css({"width":"100%"})
@@ -108,13 +114,13 @@
         .mobile_menu>li{height: 4px;width: 30px;background-color: #fff;border-radius: 10px;margin-bottom: 8px;}
 
 
-        .main_work{width: 100%;margin: auto;margin-top: 0px;text-align: center;background-color: #23293F;overflow: hidden;}
+        .main_work{width: 100%;margin: auto;margin-top: 0px;text-align: center;background-color: #2d3661;overflow: hidden;}
         .main_work>h2{font-size: 42px;text-align: center;color: #ffac40;margin-top: 100px;position: relative;padding-bottom: 10px;}
         .main_work>h2>span{width: 60px;height: 1px;position: absolute;left: 0;right: 0;bottom: 0;margin: auto;background-color: #CD5242;}
-        .main_work>p{font-size: 16px;width: 60%;line-height: 27px;text-align: center;margin: auto;margin-top: 20px;}
-        .main_work_example{width: 55%;margin-top: 50px;}
-        .main_work>button{width: 140px;height: 60px;border: 2px solid #ffac40;color: #ffac40;display: block;margin: auto;margin-top: 40px;font-size: 28px;font-weight: 500;background-color: transparent;transition: 0.4s;}
-        .main_work>button:hover{color: #23293F;background-color: #ffac40;cursor: pointer;border: 2px solid #ffac40;}
+        .main_work>p{font-size: 16px;width: 50%;line-height: 27px;text-align: center;margin: auto;margin-top: 20px;}
+        .main_work_example{width: 50%;margin-top: 50px;}
+        .main_work>a>button{width: 140px;height: 60px;border: 2px solid #ffac40;color: #ffac40;display: block;margin: auto;margin-top: 40px;font-size: 28px;font-weight: 500;background-color: transparent;transition: 0.4s;}
+        .main_work>a>button:hover{color: #23293F;background-color: #ffac40;cursor: pointer;border: 2px solid #ffac40;}
         .main_work_info{width: 90%;overflow: hidden;margin: 0 5%;margin-top: 100px;padding-bottom: 100px;}
         .main_work_info>div{float: left;width: 50%;text-align: center;margin: auto;}
         .main_work_info>div>h2{font-size: 34px;width: 120px;margin: auto;padding: 10px;color: #ffac40;}
@@ -142,37 +148,40 @@
        .sub_works>h2>span{width: 60px;height: 1px;position: absolute;left: 0;right: 0;bottom: 0;margin: auto;background-color: #CD5242;}
        .sub_works>p{font-size: 16px;margin-top: 10px;}
        .sub_works_list{width: 70%;margin: auto;margin-top: 50px;overflow: hidden;}
-       .sub_works_list>li{width: 31.3%;float: left;}
+       .sub_works_list>li{width: 31.3%;float: left;overflow: hidden;}
        .sub_works_list>li:nth-child(2){margin: 0 2%;}
-       .sub_works_list>li>img{width: 100%;margin-top: 10px;}
-       .sub_works_list>li>button{width: 100px;height: 40px;margin-top: 20px;background-color: transparent;color: #fff;border-radius: 20px;border: 1px solid #fff;transition: 0.4s;cursor: pointer;}
-       .sub_works_list>li>button:hover{background-color: #fff;color: #000;}
+       .sub_works_list>li>.img_box{width: 100%;margin-top: 20px;overflow: hidden;}
+       .img_box>img{width: 100%;transition: 0.5s;}
+       .sub_works_list>li>a{width: 100px;height: 40px;background-color: transparent;color: #fff;border-radius: 20px;border: 1px solid #fff;transition: 0.4s;cursor: pointer;display: block;line-height: 40px;margin: auto;margin-top: 20px;}
+       .sub_works_list>li:hover>.img_box>img{transform: scale(1.3);opacity: 0.6;}
+       .sub_works_list>li>a:hover{background-color: #fff;color: #000;}
+       .sub_works_list>li>h3{font-size: 22px;}
        .sub_works_list>li>p{margin-top: 10px;color: #cd5242;display: none;}
         .scroll{width: 100%;position: absolute;top: 0;left: 0;}
 
 
-        .about{width: 100%;text-align: center;margin-top: 0px;padding-bottom: 200px;background-color: #a8a5bd;overflow: hidden;}
-        .about>h2{text-align: center;font-size: 36px;color: #23293F;padding-top: 60px;position: relative;padding-bottom: 10px;}
+        .about{width: 100%;text-align: center;margin-top: 0px;padding-bottom: 200px;background-color: #a8a5bd;overflow: hidden;color: #aaa;}
+        .about>h2{text-align: center;font-size: 36px;color: #2d3661;padding-top: 60px;position: relative;padding-bottom: 10px;}
         .about>h2>span{width: 60px;height: 1px;position: absolute;left: 0;right: 0;bottom: 0;margin: auto;background-color: #CD5242;}
-        .about>h4{text-align: center;font-size: 24px;color: #23293F;margin-top: 30px;}
-        .about>h4>span{color: #23293F;font-size: 28px;}
+        .about>h4{text-align: center;font-size: 24px;color: #2d3661;margin-top: 30px;}
+        .about>h4>span{color: #2d3661;font-size: 28px;}
         .about>img{width: 300px;}
         .about_me_box1{width: 1024px;margin: auto;border-top: 1px solid rgb(243, 243, 243);border-bottom: 1px solid rgb(243, 243, 243);margin-top: 50px;overflow: hidden;padding-top: 10px;}
-        .about_me_box1>div>h4{font-size: 22px;color: #23293F;}
+        .about_me_box1>div>h4{font-size: 28px;color: #2d3661;font-weight: 700;}
         .about_me_box1_left{width: 48%;float: left;}
-        .about_me_box1_left>h4{text-align: left;color: #23293F;}
+        .about_me_box1_left>h4{text-align: left;color: #2d3661;}
         .about_me_box1_left table{margin-top: 10px;font-weight: 700;font-size: 18px;}
-        .about_me_box1_left table tr td{width: 50%;padding: 8px;}
+        .about_me_box1_left table tr td{width: 50%;padding: 8px;font-weight: 300;}
         .about_me_box1_left table tr td:nth-child(2){text-align: right;}
         .about_me_box1_left table tr td:nth-child(1){text-align: left;}
 
 
         .about_me_box1_right{width: 48%;float: right;}
-        .about_me_box1_right>h4{text-align: left;font-size: 20px;color: #23293F;}
+        .about_me_box1_right>h4{text-align: left;font-size: 28px;color: #23293F;}
         .about_me_box1_right>ul{width: 100%;margin-top: 10px;}
         .about_me_box1_right>ul>li{width: 100%;position: relative;height: 60px;margin-bottom: 8px;}
-        .about_me_box1_right>ul>li>h5{position: absolute;top: 0;left: 0;font-size: 18px;}
-        .about_me_box1_right>ul>li>h6{position: absolute;top: 0;right: 0;color: #cd5242;}
+        .about_me_box1_right>ul>li>h5{position: absolute;top: 0;left: 0;font-size: 20px;color: #2d3661;}
+       
         .skill_box1{width: 100%;position: absolute;left: 0;top: 30px;height: 20px;}
         .about_me_box1_right>ul>li>.skill_box1>.skill_box2{transition: 1s;text-align-last: left;font-size: 14px;font-weight: 300;}
 
@@ -183,14 +192,17 @@
 
 
 
-        .contact{width: 100%;padding: 200px 0;background: url(images/pexels-free-nature-stock-1564280.jpg) center no-repeat fixed;text-align: center;}
+        .contact{width: 100%;padding: 200px 0;background: url(images/contact_img.jpg) center no-repeat fixed;text-align: center;backdrop-filter: grayscale(30%);}
         .contact>h3{color: #fff;font-size: 24px;position: relative;padding-bottom: 10px;}
         .contact>h3>span{width: 60px;height: 1px;position: absolute;left: 0;right: 0;bottom: 0;margin: auto;background-color: #CD5242;}
         .contact>ul{width: 1024px;overflow: hidden;margin: auto;margin-top: 60px;}
-        .contact>ul>li{width: 33.333%;padding: 30px 0; float: left;box-sizing: border-box;height: 100px;font-weight: 900;color: #fff;}
+        .contact>ul>li{width: 33.333%;padding: 30px 0; float: left;box-sizing: border-box;height: 100px;font-weight: 900;color: #fff;font-size: 20px;}
         .contact>ul>li:nth-last-child(2){padding: 30px 20px;}
         .contact>ul>li:nth-last-child(1){border: none;}
-        footer{width: 100%;background-color: #2d3661;border-top: 1px solid rgb(194, 194, 194);}
+
+
+        
+        footer{width: 100%;background-color: #2d3661;border-top: 1px solid rgb(194, 194, 194);overflow: hidden;}
         .footer_box{width: 100%;margin: auto;}
         .footer_box>h3{float: left;padding: 10px 0;margin-left: 1%;}
         .footer_box>p{float: left;margin-left: 20px;}
@@ -260,17 +272,6 @@
 </head>
 <body>
     <h1 class="scroll_sc">0</h1>
-    <div class="main">
-        
-        <div class="introduce">
-            <h1>Lee Boram's portfolio</h1>
-            <p>creating modern and responsive design for Web Mobile</p>
-        </div>
-   
-        <div class="mouse">
-            <div class="wheel"></div>
-        </div>
-    </div>
     <header>
         <h2 class="logo">
             LBR
@@ -288,7 +289,19 @@
             <li></li>
             <li></li>
         </ul>
-    </header>
+    </header>    
+    <div class="main">
+        
+        <div class="introduce">
+            <h1>Lee Boram's portfolio</h1>
+            <p>creating modern and responsive design for Web Mobile</p>
+        </div>
+   
+        <div class="mouse">
+            <div class="wheel"></div>
+        </div>
+    </div>
+
 
 
     <section class="main_work">
@@ -307,7 +320,7 @@
         </p>
 
         <img src="images/main_work_example.png" alt="" class="main_work_example">
-            <button>View</button>
+          <a href=" https://nekawaha.github.io/starwars/" target="_blank">  <button>View</button></a>
         <div class="main_work_info">
                 <div>
                     <h2>Font</h2>
@@ -344,23 +357,26 @@
         <ul class="sub_works_list">
             <li>
                 <h3>아파트멘터리</h3>
-                <img src="images/work1.png" alt="">
+                <div class="img_box"><img src="images/work1.png" alt=""></div>
+                
                 <p>#css #script #반응형 #100% 기여</p>
-                <button><a href="https://nekawaha.github.io/dunkin/" target="_blank">View</a></button>
+                <a href="https://nekawaha.github.io/apartmentery/" target="_blank">View</a>
                 
             </li>
             <li>
                 <h3>던킨도너츠</h3>
-                <img src="images/work2.png" alt="">
+                <div class="img_box"><img src="images/work2.png" alt=""></div>
+                
                 <p>#css #script #100% 기여</p>
-                <button><a href="https://nekawaha.github.io/dunkin/" target="_blank">View</a></button>
+                <a href="https://nekawaha.github.io/dunkin/" target="_blank">View</a>
                 
             </li>
             <li>
                 <h3>롯데월드</h3>
-                <img src="images/work3.png" alt="">
+                <div class="img_box"><img src="images/work3.png" alt=""></div>
+                
                 <p>#css #script #80% 기여</p>
-                <button><a href="https://nekawaha.github.io/lotteworld/" target="_blank">View</a></button>
+                <a href="https://nekawaha.github.io/lotteworld/" target="_blank">View</a>
                 
             </li>
         </ul>
@@ -398,10 +414,7 @@
                         <td>GTQ 일러스트 1급</td>
                         <td>2022.09</td>
                     </tr>
-                    <tr>
-                        <td>자동차운전면허</td>
-                        <td>2022.03</td>
-                    </tr>
+
                 </table>
             </div>
             <div class="about_me_box1_right">
@@ -409,7 +422,7 @@
                 <ul>
                     <li>
                         <h5>Photoshop</h5>
-                        <h6>95%</h6>
+                       
                         <div class="skill_box1">
                             <div class="skill_box2">
                                 <p>인물보정 및 사진 소스 편집, 포스터 제작 가능.</p>
@@ -418,28 +431,28 @@
                     </li>
                     <li>
                         <h5>Illustrator</h5>
-                        <h6>85%</h6>
+                       
                         <div class="skill_box1">
-                            <div class="skill_box2"><p>로고, 복잡한 도형 조형, 및 포스터 일러스트 제작가능.</p></div>
+                            <div class="skill_box2"><p>로고, 일러스트 제작가능.</p></div>
                         </div>
                     </li>
                     <li>
                         <h5>CSS</h5>
-                        <h6>80%</h6>
+                      
                         <div class="skill_box1">
-                            <div class="skill_box2"><p>CSS를 사용한 사이트 구현,미디어 쿼리를 이용한 반응형 웹 사이트 제작 가능.</p></div>
+                            <div class="skill_box2"><p>CSS를 이용한 사이트 구현,미디어 쿼리를 이용한 반응형 웹 사이트 제작 가능.</p></div>
                         </div>
                     </li>
                     <li>
                         <h5>Java script</h5>
-                        <h6>50%</h6>
+                        
                         <div class="skill_box1">
                             <div class="skill_box2">자바스크립트 문법 이해 및 Jquery 라이브러리를 이용한 각종 기능구현 가능.</div>
                         </div>
                     </li>
                     <li>
                         <h5>Premiere/Effect</h5>
-                        <h6>70%</h6>
+       
                         <div class="skill_box1">
                             <div class="skill_box2">동영상 편집 및 제작, 자막 달기 가능.</div>
                         </div>
@@ -465,8 +478,8 @@
         <ul>
             <li><p>이보람 <br>
             010-9315-1047</p></li>
-            <li><p>Republic of Korea <br>
-                경기도 의정부시 금오동</p></li>
+            <li><p>git <br>
+               <a href="https://github.com/nekawaha">https://github.com/nekawaha</a> </p></li>
             <li><p>mail <br>
             eva014565@gmail.com</p></li>
         </ul>
