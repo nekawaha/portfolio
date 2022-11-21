@@ -118,7 +118,7 @@
         .main_work{width: 100%;margin: auto;margin-top: 0px;text-align: center;background-color: #2d3661;overflow: hidden;}
         .main_work>h2{font-size: 42px;text-align: center;color: #ffac40;margin-top: 100px;position: relative;padding-bottom: 10px;}
         .main_work>h2>span{width: 60px;height: 1px;position: absolute;left: 0;right: 0;bottom: 0;margin: auto;background-color: #CD5242;}
-        .main_work>p{font-size: 16px;width: 50%;line-height: 27px;text-align: center;margin: auto;margin-top: 20px;}
+        .main_work>p{font-size: 16px;line-height: 27px;text-align: center;margin: auto;margin-top: 20px;width: 90%;}
         .main_work_example{width: 50%;margin-top: 50px;}
         .main_work>a>button{width: 140px;height: 60px;border: 2px solid #ffac40;color: #ffac40;display: block;margin: auto;margin-top: 40px;font-size: 28px;font-weight: 500;background-color: transparent;transition: 0.4s;}
         .main_work>a>button:hover{color: #23293F;background-color: #ffac40;cursor: pointer;border: 2px solid #ffac40;}
@@ -126,13 +126,13 @@
         .main_work_info>div{float: left;width: 50%;text-align: center;margin: auto;}
         .main_work_info>div>h2{font-size: 34px;width: 120px;margin: auto;padding: 10px;color: #ffac40;}
         .main_work_info>div>p{margin-top: 20px;}
-        .font_list{width: 70%;margin: auto;margin-top: 40px;}
+        .font_list{width: 70%;margin: auto;margin-top: 40px;overflow: hidden;}
         .font_list>li{width: 50%;line-height: 40px;float: left;font-size: 22px;margin-bottom: 20px;}
         .font_list>li:nth-child(1){font-family: jedi;}
         .font_list>li:nth-child(2){font-family: lemonmilk;}
         .font_list>li:nth-child(3){font-family: akira;}
         .font_list>li:nth-child(4){font-family: space;}
-        .color_list{width: 70%;margin: auto;margin-top: 40px;}
+        .color_list{width: 70%;margin: auto;margin-top: 40px;overflow: hidden;}
         .color_list>li{width: 20%;float: left;margin: 0 2%;}
         .color_list>li>div{width: 60px;height: 60px;margin: auto;margin-bottom: 10px;}
         .color_list>li:nth-child(1){color: #fff;}
@@ -144,10 +144,10 @@
         .color_list>li:nth-child(3)>div{background-color: #EB212E;}
         .color_list>li:nth-child(4)>div{background-color: #15fefd;}
 
-       .sub_works{width: 100%;text-align: center;overflow: hidden;margin: auto;margin-top: 0px;padding-bottom: 100px;background-color: #2d3661;}
+       .sub_works{width: 100%;text-align: center;overflow: hidden;margin: auto;margin-top: 0px;padding-bottom: 100px;background-color: #2d3661;border-top: 1px solid #434f8f;}
        .sub_works>h2{font-size: 42px;color: #ffac40;padding-top: 60px;position: relative;padding-bottom: 10px;}
        .sub_works>h2>span{width: 60px;height: 1px;position: absolute;left: 0;right: 0;bottom: 0;margin: auto;background-color: #CD5242;}
-       .sub_works>p{font-size: 16px;margin-top: 10px;}
+       .sub_works>p{font-size: 16px;width: 90%;margin: auto;margin-top: 10px;}
        .sub_works_list{width: 70%;margin: auto;margin-top: 50px;overflow: hidden;}
        .sub_works_list>li{width: 31.3%;float: left;overflow: hidden;}
        .sub_works_list>li:nth-child(2){margin: 0 2%;}
@@ -163,11 +163,12 @@
 
         .about{width: 100%;text-align: center;margin-top: 0px;padding-bottom: 80px;overflow: hidden;background-color: #cccccc;}
         .about>h2{text-align: center;font-size: 36px;color: #ffac40;padding-top: 20px;position: relative;padding-bottom: 10px;}
+        .about_me_box{width: 70%;margin: auto;overflow: hidden;margin-top: 20px;}
         .about>h2>span{width: 60px;height: 1px;position: absolute;left: 0;right: 0;bottom: 0;margin: auto;background-color: #CD5242;}
         .about_me_box1>h4{text-align: center;font-size: 24px;color: #2d3661;}
         .about_me_box1>h4>span{color: #2d3661;font-size: 28px;}
         .about_me_box1>img{width: 200px;}
-        .about_me_box{width: 70%;margin: auto;overflow: hidden;margin-top: 20px;}
+        
         .about_me_box>div{float: left;}
 
         .about_me_box1{margin-right: 12%;width:49%;}
@@ -221,18 +222,23 @@
         @media all and (min-width:320px) {/*320~767 모바일*/
             .menu{display: none;}
             .mobile_menu{display: block;}
+            .introduce{width: 350px;height: 350px;}
+            .introduce>h1{margin-top: 90px;}
             .main_work{width: 100%;}
 
             .main_work_info{width: 95%;overflow: hidden;margin: 0 5%;margin-top: 100px;}
             .main_work_info>div{float: left;width: 90%;text-align: center;margin: auto;}
-            .sub_works_list>li{width: 90%;float: left;}
+            .font_list{width: 100%;}
+        .color_list{width: 100%;}
+            .sub_works_list>li{width: 100%;float: left;}
             .sub_works_list>li:nth-child(2){margin: 10% 0%;}
             .responsive{width: 90%;}
             .responsive>ul>li{width: 96%;margin: 2%;height: 65vw;}
             .pc_work>ul{width: 90%;}
             .pc_work>ul>li{width: 46%;margin: 2%;float: left;}
-            .about_me_box1{margin-right: 0%;width:100%;}
-            .about_me_box2{overflow: hidden;width: 100%;}
+            .about_me_box{width: 90%;}
+            .about_me_box1{margin-right: 0%;width:100%;margin-top: 20px;}
+            .about_me_box2{overflow: hidden;width: 100%;margin-top: 20px;}
             .contact>ul{width: 90%;}
             .contact>ul>li{width: 100%;border-right: none;}
             .footer_box{width: 100%;margin: auto;}
@@ -240,13 +246,18 @@
         @media all and (min-width:768px) {/*768~1023 태블릿*/
             .menu{display: block;}
             .mobile_menu{display: none;}
+            .introduce{width: 460px;height: 460px;}
+            .introduce>h1{margin-top: 180px;}
             .main_work{width: 100%;}
             .main_work_info{width: 90%;overflow: hidden;margin: 0 5%;margin-top: 100px;}
         .main_work_info>div{float: left;width: 50%;text-align: center;margin: auto;}
+        .font_list{width: 70%;}
+        .color_list{width: 70%;}
         .sub_works_list>li{width: 31.3%;float: left;}
         .sub_works_list>li:nth-child(2){margin: 0 2%;}
-        .about_me_box1{margin-right: 12%;width:49%;}
-        .about_me_box2{overflow: hidden;width: 39%;}
+        .about_me_box{width: 70%;}
+        .about_me_box1{margin-right: 12%;width:49%;margin-top: 0;}
+        .about_me_box2{overflow: hidden;width: 39%;margin-top: 0;}
             .contact>ul{width: 95%;display: block;}
             .footer_box{width: 100%;margin: auto;}
             .contact>ul>li{width: 33.333%;border-right: 1px solid #fff;}
@@ -254,18 +265,22 @@
         @media all and (min-width:1024px) {/*1024~1599 노트북*/
             .menu{display: block;}
             .mobile_menu{display: none;}
+            .introduce{width: 460px;height: 460px;}
+            .introduce>h1{margin-top: 180px;}
             .main_work{width: 100%;}
-
             .main_work_info{width: 90%;overflow: hidden;margin: 0 5%;margin-top: 100px;}
         .main_work_info>div{float: left;width: 50%;text-align: center;margin: auto;}
+        .font_list{width: 70%;}
+        .color_list{width: 70%;}
         .sub_works_list>li{width: 31.3%;float: left;}
         .sub_works_list>li:nth-child(2){margin: 0 2%;}
             .responsive{width: 1024px;}
             .responsive>ul>li{width: 46%;margin: 2%;height: 350px;}
             .pc_work>ul{width: 1024px;}
             .pc_work>ul>li{width: 31.333%;margin: 1%;float: left;position: relative;}
-            .about_me_box1{margin-right: 12%;width:49%;}
-        .about_me_box2{overflow: hidden;width: 39%;}
+            .about_me_box{width: 70%;}
+            .about_me_box1{margin-right: 12%;width:49%;margin-top: 0;}
+            .about_me_box2{overflow: hidden;width: 39%;margin-top: 0;}
 
             .contact>ul{width: 1024px;display: block;}
             .footer_box{width: 100%;margin: auto;}
